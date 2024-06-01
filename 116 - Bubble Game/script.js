@@ -2,10 +2,6 @@
 let gameBox = document.querySelector(".cbody")
 let bubble = document.querySelector(".bubble")
 
-//Sound Effects
-let hitSound = new Audio("hit.wav")
-let misSound = new Audio("wrong.wav")
-let overSound = new Audio("over.mp3")
 
 //DefaulScreen
 let starting=`<div.ending><h2 class="start" style="font-size:35px;border:2px solid black;padding:0px 20px;border-radius:25px;background-color:lightgreen;cursor:pointer;">Start</h2></div>`
@@ -74,14 +70,9 @@ gameBox.addEventListener("click", (dets) => {
     let htnbtn = Number(dets.target.textContent);
     console.log(dets.target)
     if (htnbtn === htval) {
-        hitSound.play()
         increaseScore()
         makebubble()
         changeHitval()
-
-    }
-    else if(dets.target!=gameBox && htnbtn != htval){
-        misSound.play()
 
     }
     
